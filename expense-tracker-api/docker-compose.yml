@@ -1,0 +1,18 @@
+version: '3.1'
+
+services:
+  db:
+    image: postgres:15
+    container_name: expensetracker_postgres
+    restart: always
+    environment:
+      POSTGRES_DB: expensetracker_db
+      POSTGRES_USER: expensetracker_admin
+      POSTGRES_PASSWORD: expensetracker_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
