@@ -7,8 +7,8 @@ services:
     restart: always
     environment:
       POSTGRES_DB: expensetracker_db
-      POSTGRES_USER: expensetracker_admin
-      POSTGRES_PASSWORD: expensetracker_pass
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
     ports:
       - "5432:5432"
     volumes:
